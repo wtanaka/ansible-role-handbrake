@@ -5,6 +5,7 @@
     --recv 43D3A9F60C58A7169778E6FB8771ADB0816950D8
   register: stebbins_key_result
   changed_when: "'unchanged: 1' not in stebbins_key_result.stderr"
+  sudo: yes
 
 - name: write stebbins handbrake ppa key to /root
   command: >
@@ -12,3 +13,4 @@
         --export 43D3A9F60C58A7169778E6FB8771ADB0816950D8
   args:
     creates: /root/stebbins_handbrake_ppa.gpg
+  sudo: yes

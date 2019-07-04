@@ -1,2 +1,3 @@
 ---
-package_name: handbrake-gtk
+package_names:
+- handbrake-gtk
